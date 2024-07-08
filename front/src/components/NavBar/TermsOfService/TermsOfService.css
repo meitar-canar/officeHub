@@ -1,0 +1,23 @@
+.TermsOfService p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    text-align: start;
+    padding: 15px;
+}
+
+.TermsOfService button {
+    border-radius: 5px;
+    border: 2px solid #000000;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    background-color: #000000;
+    margin-bottom: 40px;
+}
+
+/* .TermsOfService h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    text-align: start;
+    padding: 15px;
+} */

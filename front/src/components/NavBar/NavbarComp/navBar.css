@@ -1,0 +1,46 @@
+.Navbar .navBTN {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.Navbar .navBTN .navItem a {
+    color: #000000;
+    text-decoration: wavy;
+    font: 1em sans-serif;
+}
+
+.Navbar .navBTN .navItem a:hover {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.Navbar .navBTN .navItem .home-icon img {
+    width: 72px;
+    height: 50px;
+}
+
+.Navbar .navBTN .cart-icon img {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    width: 40px;
+
+}
+
+.Navbar .navBTN .navItem img {
+    width: 50px;
+    margin-right: 8px;
+}
+
+.Navbar .navBTN .cart-count {
+    background-color: rgba(109, 109, 109, 0.85);
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+}

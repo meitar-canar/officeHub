@@ -1,0 +1,68 @@
+.PayMent {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    gap: 50px;
+}
+
+.PayMent .quiz {
+    border-radius: 15px;
+    border: 1.5px solid #252525;
+    padding: 8px;
+}
+
+.PayMent .img img {
+    height: 500px;
+}
+
+.PayMent h4 {
+    margin: 5px;
+    font-size: 15px;
+}
+
+.PayMent button {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.PayMent input {
+    border: 1.5px solid #252525;
+    border-radius: 10px;
+    margin: 10px 0 20px;
+    width: 250px;
+    padding: 5px;
+}
+
+.PayMent .event-details {
+    text-align: left;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1.5px solid #252525;
+    padding: 8px;
+}
+
+.PayMent .event-details h2 {
+    margin-bottom: 15px;
+}
+
+.PayMent .event-details div {
+    margin-bottom: 10px;
+}
+
+.PayMent .event-details p {
+    margin: 5px 0;
+}

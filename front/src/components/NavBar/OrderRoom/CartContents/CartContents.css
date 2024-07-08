@@ -1,0 +1,46 @@
+.mainCart {
+    position: relative;
+
+}
+
+.CartContents {
+    border: 3px solid #252525;
+    border-radius: 5%;
+    margin: 5px;
+
+}
+
+.CartContents .officeCard {
+    border: 2px solid #252525;
+    border-radius: 4%;
+    width: 305px;
+    height: auto;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+
+
+
+.CartContents p {
+    padding-right: 15%;
+}
+
+.CartContents img {
+    border-radius: 3%;
+    width: 300px;
+    height: 200px;
+}
+
+.CartContents button {
+    background-color: rgba(0, 0, 0);
+    border-radius: 5px;
+    margin: 10px;
+    height: 40px;
+    top: 80%;
+    font-size: smaller;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+}

@@ -1,0 +1,45 @@
+.RoomsCard {
+    position: relative;
+    border: 3px solid #252525;
+    border-radius: 5%;
+
+}
+
+.RoomsCard .infoCard.hdn {
+    display: none;
+}
+
+.RoomsCard .infoCard {
+    background-color: rgb(146, 146, 146);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+
+}
+
+.RoomsCard h4 {
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.infoCard button {
+    border: 3px solid #252525;
+    margin-top: 180px;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    /* Indicate clickable button */
+}
