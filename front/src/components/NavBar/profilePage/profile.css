@@ -26,3 +26,65 @@
     padding-left: 20px;
     padding-right: 10px;
 }
+.ProfileMainComp #ProfileSelect {
+    /* Background color (light gray) */
+    background-color: #f5f5f5;
+
+    /* Borders (dark gray) */
+    border: 3px solid #333;
+
+    /* Border radius (rounded corners) */
+    border-radius: 5px;
+
+    /* Text styling */
+    font-size: 16px;
+    /* Adjust as needed */
+    color: #333;
+    /* Black text */
+    padding: 5px 10px;
+    /* Add padding for content */
+
+    /* Optional: Focus styling */
+    outline: none;
+    /* Remove default outline */
+    border-color: #000;
+    /* Black border on focus (optional) */
+
+    /* Arrow styling (using pseudo-element) */
+    appearance: none;
+
+    /* Remove default dropdown arrow */
+    /* Create an arrow using a pseudo-element */
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%) rotate(90deg);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 4px 0 4px;
+        border-color: #333 transparent transparent transparent;
+        /* Black arrow */
+    }
+
+    /* Optional: Hover styling */
+    &:hover {
+        background-color: #ddd;
+    }
+
+    /* Optional: Active styling */
+    &:active {
+        background-color: #ccc;
+    }
+
+    /* Optional: Disabled styling */
+    &:disabled {
+        background-color: #ccc;
+    }
+}
+
+.ProfileMainComp #ProfileSelect:hover {
+    background-color: #ddd;
+}

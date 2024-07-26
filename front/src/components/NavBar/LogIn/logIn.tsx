@@ -25,13 +25,13 @@ export default function LogIn() {
         const newErrors: { [key: string]: string } = {};
 
         if (logInData.userName.length < 2 || logInData.userName.length > 15) {
-            newErrors.userName = 'The user name must contain between 2-15 characters';
+            newErrors.userName = 'User or password does not exist';
             isValid = false;
         }
 
         const password = /^(?=.*[a-z])(?=.*\d).{8,}$/;
         if (!password.test(logInData.password)) {
-            newErrors.password = 'The password must contain at least one lowercase letter, one number, and be at least 8 characters long.';
+            newErrors.password = 'User or password does not exist.';
             isValid = false;
         }
 
@@ -66,7 +66,7 @@ export default function LogIn() {
                         navigateToNewPage('/profile-page');
                     }, 3000); // Wait for 2 seconds before navigating to profile page
                 } else {
-                    console.error('Unexpected login response');
+                    console.error('User or password does not exist.');
                     navigateToNewPage('/signUp');
                 }
             })

@@ -8,7 +8,7 @@ import { navDataArr } from './components/NavBar/NavbarComp/navDetails';
 import LogIn from './components/NavBar/LogIn/logIn';
 import Rooms from './components/NavBar/Rooms/Rooms';
 import ProfilePage from './components/NavBar/profilePage/profile';
-import MyCalendar from './components/NavBar/CalendarComp/MyCalendar';
+import MyCalendar from './components/NavBar/OrderRoom/CalendarComp/MyCalendar';
 import CartContents from './components/NavBar/OrderRoom/CartContents/CartContents';
 import PayMent from './components/NavBar/OrderRoom/payment/PayMent';
 import TermsOfService from './components/NavBar/TermsOfService/TermsOfService';
@@ -32,7 +32,7 @@ function App() {
             <Route path="cart" element={<CartContents />} />
             <Route path="/PayMent" element={<PayMent />} />
             <Route path="/TermsOfService" element={<TermsOfService />} />
-            <Route path="calendar" element={<MyCalendar />} />
+            <Route path="calendar/:id" element={<MyCalendar />} />
           </Routes>
         </ShoppingCartProvider>
       </BrowserRouter>

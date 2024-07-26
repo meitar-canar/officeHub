@@ -32,7 +32,7 @@ export default function ProfilePage() {
                     console.log('Payload:', atob(tokenParts[1]));
                     console.log('Signature:', tokenParts[2]);
 
-                    const decodedToken: JwtPayload = jwtDecode<JwtPayload>(token); // Use generic type annotation
+                    const decodedToken: JwtPayload = jwtDecode<JwtPayload>(token); 
 
                     setUserProfile({
                         firstName: decodedToken.firstName,
@@ -50,7 +50,7 @@ export default function ProfilePage() {
             }
         };
         fetchProfile();
-    }, []);
+    }, []); 
 
     if (!userProfile) {
         return <div>Loading...</div>;
@@ -63,8 +63,8 @@ export default function ProfilePage() {
     return (
         <div className='ProfileMainComp'>
             <select id="ProfileSelect" onChange={(e) => { settheColor(e.target.value) }}>
-                <option value="">See the subtitles better</option>
-                <option value="rgb(146, 146, 146)">color change</option>
+                <option value="">Light mode</option>
+                <option value="rgb(146, 146, 146)">Dark mode</option>
             </select>
             <div className='ProfileComp'>
                 <ProfileCard theProfOfCard={userProfile} changeColor={theColor} />

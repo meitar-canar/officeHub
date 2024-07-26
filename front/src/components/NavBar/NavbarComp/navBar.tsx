@@ -11,11 +11,7 @@ interface NavBarProps {
 }
 
 const NavBar: React.FC<NavBarProps> = (props) => {
-    const { cartItems } = useShoppingCart();
-
-    // Calculate total quantity from all items in the cart
-    const totalQuantity = cartItems.reduce((acc, curr) => acc + curr.quantity, 0);
-
+    const { cartCount } = useShoppingCart(); // Use cartCount
 
     return (
         <div className='Navbar'>
@@ -25,7 +21,7 @@ const NavBar: React.FC<NavBarProps> = (props) => {
                         <div className='navItem' key={curr.urlSTR}>
                             {curr.displayStr === 'Home' ? (
                                 <Link to='/home' className='home-icon'>
-                                    <img src='/img/office hub.png' alt='Home' />
+                                    <img src='/img/office hub (1).png' alt='Home' />
                                 </Link>
                             ) : (
                                 <Link to={curr.urlSTR}>{curr.displayStr}</Link>
@@ -35,8 +31,7 @@ const NavBar: React.FC<NavBarProps> = (props) => {
                 <h1>{props.titleOfNav}</h1>
                 <Link to='/cart' className='cart-icon'>
                     <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoPC55O_ZCCZhj58qwrGZ9B0VRWdEvT8uhqw&s' alt='Shopping Cart' />
-                    {/* Conditionally display cart quantity badge */}
-                    {totalQuantity > 0 && <span className='cart-count'>{totalQuantity}</span>}
+                    {cartCount > 0 && <span className='cart-count'>{cartCount}</span>}
                 </Link>
             </div>
         </div>

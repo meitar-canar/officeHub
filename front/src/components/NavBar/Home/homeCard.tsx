@@ -1,9 +1,9 @@
 import React from 'react';
 import './homeCard.css'; // Import styles for the homeCard component
-import { offices } from '../types/types';
+import { office } from '../types/types';
 
 
-export default function HomeCard(props: { theRoomsOfCard: offices; }) {
+export default function HomeCard(props: { theRoomsOfCard: office; }) {
 
 
 

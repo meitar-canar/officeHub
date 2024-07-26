@@ -1,3 +1,19 @@
+.Navbar {
+    position: -webkit-sticky;
+    /* For Safari */
+    position: sticky;
+    /* For other modern browsers */
+    top: 0;
+    /* Stick to the top */
+    width: 100%;
+    /* Full width */
+    background-color: rgb(255, 255, 255);
+    /* Background color to make it visible */
+    z-index: 1000;
+    /* Ensure it stays on top of other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a shadow for better visibility */
+}
 .Navbar .navBTN {
     display: flex;
     flex-wrap: wrap;
@@ -23,24 +39,25 @@
     height: 50px;
 }
 
+.Navbar .navBTN .cart-icon {
+    position: relative;
+}
 .Navbar .navBTN .cart-icon img {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: inherit;
     width: 40px;
-
-}
-
-.Navbar .navBTN .navItem img {
-    width: 50px;
-    margin-right: 8px;
 }
 
 .Navbar .navBTN .cart-count {
-    background-color: rgba(109, 109, 109, 0.85);
-    color: rgb(0, 0, 0);
+    position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: red;
+        color: white;
     border-radius: 50%;
     padding: 4px 8px;
     font-size: 12px;
+    font-weight: bold;
 }

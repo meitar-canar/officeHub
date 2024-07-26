@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
-import './Rooms.css'
+import { useEffect, useState } from 'react';
+import './Rooms.css';
 import RoomsCard from './RoomsCard';
 
 export default function Rooms() {
     const [theArrRooms, setTheArrRooms] = useState([]);
-    const [theColor, settheColor] = useState('');
+    const [theColor, setTheColor] = useState('');
 
     useEffect(() => {
         let url = 'http://localhost:3001/office';
@@ -21,19 +21,21 @@ export default function Rooms() {
     return (
         <div className='RoomsComp'>
             <h1>Our Rooms</h1>
-            <select id="RoomSelect" onChange={(e) => { settheColor(e.target.value) }}>
+            <select id="RoomSelect" onChange={(e) => { setTheColor(e.target.value) }}>
                 <option value="">Light mode</option>
-                <option value="rgb(146, 146, 146)">Dark mode</option>
+                <option value="rgb(179, 179, 179)">Dark mode</option>
             </select>
+
             <div className='theComp'>
                 {theArrRooms.length === 0 ? (
-                    <p>Loading rooms...</p>
+                    <p id='loading'>Loading rooms...</p>
                 ) : (
                     theArrRooms.map((curr) => (
-                        <RoomsCard theRoomsOfCard={curr} key={curr} changeColor={theColor} />
+                        <RoomsCard theRoomOfCard={curr} key={curr} changeColor={theColor} />
                     ))
                 )}
             </div>
         </div>
-    )
+    );
 }
+

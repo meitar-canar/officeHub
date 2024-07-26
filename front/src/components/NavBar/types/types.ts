@@ -39,7 +39,8 @@ export interface order {
 }
 
 
-export interface offices {
+export interface office {
+    officeId: any;
     id: string,
     officeName: string,
     location: string,
@@ -47,5 +48,11 @@ export interface offices {
     rent_price: string,
     picture: string
 
+}
+
+export interface cartItem {
+    id: string,
+    quantity: number,
+    office: office
 }
 

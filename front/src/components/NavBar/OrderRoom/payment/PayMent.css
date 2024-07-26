@@ -13,24 +13,33 @@
     gap: 50px;
 }
 
-.PayMent .quiz {
+.PayMent .quiz,
+.PayMent .bookDetails {
     border-radius: 15px;
     border: 1.5px solid #252525;
     padding: 8px;
+    width: 300px;
+        /* Adjust width as necessary */
 }
 
-.PayMent .img img {
-    height: 500px;
+.PayMent img {
+    width: 280px;
+    height: 240px;
+    border-radius: 5%;
 }
 
+.PayMent .imgSale {
+    width: 400px;
+    height: 350px;
+}
 .PayMent h4 {
-    margin: 5px;
+    margin: 1px;
     font-size: 15px;
 }
 
 .PayMent button {
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     background-color: #000000;
     color: rgb(255, 255, 255);
     padding: 10px 20px;
@@ -47,22 +56,8 @@
     padding: 5px;
 }
 
-.PayMent .event-details {
-    text-align: left;
-    padding: 20px;
-    border-radius: 15px;
-    border: 1.5px solid #252525;
-    padding: 8px;
-}
-
-.PayMent .event-details h2 {
-    margin-bottom: 15px;
-}
-
-.PayMent .event-details div {
-    margin-bottom: 10px;
-}
-
-.PayMent .event-details p {
-    margin: 5px 0;
+.PayMent .bookDetails h2,
+.PayMent .bookDetails h3 {
+    margin-top: 0;
+    font-size: 18px;
 }
