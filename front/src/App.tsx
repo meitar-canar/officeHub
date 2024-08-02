@@ -14,6 +14,7 @@ import PayMent from './components/NavBar/OrderRoom/payment/PayMent';
 import TermsOfService from './components/NavBar/TermsOfService/TermsOfService';
 import SignUp from './components/NavBar/SignUp/signUp';
 import { ShoppingCartProvider } from './components/NavBar/OrderRoom/ShoppingCartContext';
+import Dashboard from './components/NavBar/dashboard/dashboard';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/TermsOfService" element={<TermsOfService />} />
             <Route path="calendar/:id" element={<MyCalendar />} />
           </Routes>
+          <Dashboard />
         </ShoppingCartProvider>
       </BrowserRouter>
     </div>

@@ -140,7 +140,7 @@ export default function ContactUs() {
                         <br />
                         <br />
                         <h1>Call us</h1>
-                        <h5>Questions about plans, pricing, or availability? 072-555-5555</h5>
+                        <p>Questions about plans, pricing, or availability? <br /><a href="tel:072-265-8712"> 072-555-5555</a></p>
                     </div>
                 </div>
             </form>

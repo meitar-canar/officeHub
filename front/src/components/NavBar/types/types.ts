@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface userLogin {
     userName: string,
     password: string
@@ -38,6 +40,12 @@ export interface order {
     orderDate: string,
 }
 
+interface event {
+    id: number;
+    start: moment.MomentInput; // or moment.MomentInput
+    end: moment.MomentInput;   // or moment.MomentInput
+}
+
 
 export interface office {
     officeId: any;
@@ -51,6 +59,7 @@ export interface office {
 }
 
 export interface cartItem {
+
     id: string,
     quantity: number,
     office: office

@@ -3,40 +3,46 @@ import './home.css'; // Import styles for the home component
 import HomeCard from './homeCard'; // Import the homeCard component
 import { To, useNavigate } from 'react-router-dom';
 
-
 export default function Home() {
-
     const navigate = useNavigate();
     const navigateToNewPage = (pagePath: To) => {
         navigate(pagePath);
     };
 
+    const [scrollY, setScrollY] = useState(0);
+
+    const handleScroll = () => {
+        setScrollY(window.scrollY);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <div className='HomeContainer'>
             <div className='imgDiv'>
-                <div className='welcomeWords'>
+                <div className={`welcomeWords ${scrollY > 50 ? 'shrink' : ''}`}>
                     <h1>Welcome To Office Hub</h1>
                     <h3>We have many offices for you</h3>
                     <button onClick={() => navigateToNewPage('/rooms')}>Start Here</button>
                 </div>
                 <img src="https://cdn.prod.website-files.com/6442419dcf656a81da76b503/65abe47618f010d59935538b_office-background-for-zoom.webp" alt="officeImg" />
-
             </div>
             <div className='DivIcons'>
                 <div><img src="https://cdn-icons-png.freepik.com/512/4594/4594998.png" alt="workspace img" />
-                    <h5>Your perfect workspace
-                    </h5>
+                    <h5>Your perfect workspace</h5>
                     <p>Find productive workspace for your needs, whether it's a single desk, a meeting room, or a private office.</p>
                 </div><hr />
                 <div><img src="https://cdn-icons-png.freepik.com/512/5899/5899157.png" alt="calander img" />
-                    <h5>Work with flexible terms
-                    </h5>
+                    <h5>Work with flexible terms</h5>
                     <p>Enjoy the freedom of having space whenever you need it—by the hour, the day, the month, or longer.</p>
                 </div><hr />
                 <div><img src="https://icons.iconarchive.com/icons/steve/zondicons/512/Location-icon.png" alt="" />
-                    <h5>Wherever work takes you
-                    </h5>
+                    <h5>Wherever work takes you</h5>
                     <p>Unlock a world of workspace within our global footprint — work from near home, at multiple locations.</p>
                 </div>
             </div>
@@ -46,10 +52,8 @@ export default function Home() {
                     <h3>Private Offices for teams of all sizes, for a free one-week trial.</h3>
                     <button onClick={() => navigateToNewPage('/signUp')}>To SignUp</button>
                     <h6>Limited time offer, applicable to Private Offices only, subject to availability, for new members only. WeWork may change or cancel the offer at any time. Subject to the terms & conditions and membership agreement.</h6>
-
                 </div>
                 <img src="https://images.squarespace-cdn.com/content/v1/63d316419f963d5d69eb17a6/436c6f77-e69c-41d5-826b-07322665e546/DSC05022.jpg" alt="officeImg" />
-
             </div>
             <br />
             <div className='RoomsDiv'>

@@ -7,7 +7,7 @@ const Cart = () => {
     const { cartItems, removeFromCart } = useShoppingCart();
     const navigate = useNavigate();
 
-    // TODO addd the time and day
+    // TODO addd the time and day to the 
     const navigateToCalendar = (office: office) => {
         navigate('/calendar', { state: { office } });
     };
@@ -26,7 +26,7 @@ const Cart = () => {
                             <h4>Price: {item.office.rent_price}</h4>
                             <h4>Capacity: 1{item.office.capacity}</h4>
                             <button onClick={() => removeFromCart(item.id)}>Remove</button>
-                            <button onClick={() => navigateToCalendar(item.office)}>Choose day and time</button>
+                            <button onClick={() => navigateToCalendar(item.office)}>Back To The Calendar</button>
                         </div>
                     ))
                 )}
